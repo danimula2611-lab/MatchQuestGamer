@@ -1,0 +1,7 @@
+{
+  "name": "MatchQuestGamer",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
