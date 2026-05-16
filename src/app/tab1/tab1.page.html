@@ -1,17 +1,59 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+  <ion-toolbar color="dark">
+    <ion-title>MatchQuestGamer</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <div class="welcome-header ion-margin-bottom">
+    <h1>¡Bienvenido, Player 1!</h1>
+    <p>Encuentra tu equipo perfecto o reta a otros jugadores.</p>
+  </div>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+  <ion-searchbar placeholder="Buscar juegos, salas o usuarios..." color="light" class="ion-no-padding"></ion-searchbar>
+
+  <div class="section-title ion-margin-top">
+    <h2>Juegos en Tendencia</h2>
+  </div>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-subtitle>Shooter / Competitivo</ion-card-subtitle>
+      <ion-card-title>Valorant</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      342 salas activas buscando miembros para ranked en este momento.
+      <ion-button expand="block" fill="clear" color="primary" class="ion-margin-top">
+        Buscar Match
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-subtitle>MOBA / Estrategia</ion-card-subtitle>
+      <ion-card-title>League of Legends</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      ¿Cansado de jugar solo en la Grieta? Encuentra un dúo para trepar en clasificatorias.
+      <ion-button expand="block" fill="clear" color="primary" class="ion-margin-top">
+        Buscar Match
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card color="dark">
+    <ion-card-header>
+      <ion-card-subtitle>Estrategia / Competitivo</ion-card-subtitle>
+      <ion-card-title>FC 26</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+       405 jugadores buscando gente para jugar 1vs1 o compartir equipo 2vs2.
+      <ion-button expand="block" fill="clear" color="primary" class="ion-margin-top">
+        Buscar Match
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
