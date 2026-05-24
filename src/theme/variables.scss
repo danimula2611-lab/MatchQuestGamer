@@ -1,2 +1,24 @@
-// For information on how to create your own theme, please refer to:
-// https://ionicframework.com/docs/theming/
+:root {
+  /** Colores principales llamativos y vivos **/
+  --ion-color-primary: #0066ff;          /* Azul eléctrico potente */
+  --ion-color-primary-rgb: 0, 102, 255;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-shade: #0052cc;
+  --ion-color-primary-tint: #3385ff;
+
+  --ion-color-secondary: #ff007f;        /* Rosa/Magenta neón muy alegre */
+  --ion-color-secondary-rgb: 255, 0, 127;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-shade: #e60072;
+  --ion-color-secondary-tint: #ff3399;
+
+  /** Fondo Blanco y Limpio **/
+  --ion-background-color: #ffffff;       /* Fondo blanco puro */
+  --ion-background-color-rgb: 255, 255, 255;
+
+  --ion-text-color: #1c1c1e;             /* Texto oscuro para que se lea perfecto */
+  --ion-text-color-rgb: 28, 28, 30;
+
+  /* Fondo de los campos de texto en gris muy clarito y limpio */
+  --ion-item-background: #f4f5f8;
+}
