@@ -1,0 +1,15 @@
+// Contenedor del logo para centrarlo por completo
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  img {
+    max-width: 550px; 
+    height: auto;
+    display: block;
+  }
+}

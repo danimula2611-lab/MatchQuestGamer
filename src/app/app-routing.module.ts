@@ -14,6 +14,11 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    // Cambiado a loadComponent porque la página es Standalone
+    path: 'register',
+    loadComponent: () => import('./register/register.page').then(m => m.RegisterPage)
   }
 ];
 
