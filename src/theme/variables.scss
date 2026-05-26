@@ -22,3 +22,28 @@
   /* Fondo de los campos de texto en gris muy clarito y limpio */
   --ion-item-background: #f4f5f8;
 }
+
+/** * BLOQUEO DEL MODO OSCURO AUTOMÁTICO
+ * Obligamos a que si el móvil pide modo 'dark', se usen los mismos colores claros
+ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ion-background-color: #ffffff !important;
+    --ion-background-color-rgb: 255, 255, 255 !important;
+    --ion-text-color: #1c1c1e !important;
+    --ion-text-color-rgb: 28, 28, 30 !important;
+    --ion-item-background: #f4f5f8 !important;
+  }
+  
+  body, html, ion-content {
+    background: #ffffff !important;
+    --background: #ffffff !important;
+    color: #1c1c1e !important;
+    --color: #1c1c1e !important;
+  }
+
+  ion-item, ion-input, ion-label, p, span, a {
+    --color: #1c1c1e !important;
+    color: #1c1c1e !important;
+  }
+}
