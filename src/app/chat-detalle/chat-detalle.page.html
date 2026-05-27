@@ -29,10 +29,14 @@
 
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="light">
-    <ion-item lines="none" style="--background: transparent; width: 100%;">
-      <ion-input [(ngModel)]="nuevoMensaje" placeholder="Escribe un mensaje..." (keyup.enter)="enviarMensaje()"></ion-input>
+<ion-footer style="border-top: 1px solid #e0e0e0;">
+  <ion-toolbar style="--background: #ffffff; background: #ffffff;">
+    <ion-item lines="none" style="--background: #ffffff; background: #ffffff; width: 100%;">
+      <ion-input [(ngModel)]="nuevoMensaje" 
+                 placeholder="Escribe un mensaje..." 
+                 (keyup.enter)="enviarMensaje()"
+                 style="color: #1c1c1e; --color: #1c1c1e; --placeholder-color: #8e8e93;">
+      </ion-input>
       <ion-button slot="end" fill="clear" (click)="enviarMensaje()">
         <ion-icon name="send" slot="icon-only" color="primary"></ion-icon>
       </ion-button>
