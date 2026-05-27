@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core'; // <-- Paso 1: Importamos OnInit
 
 @Component({
   selector: 'app-tab1',
@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss'],
   standalone: false,
 })
-export class Tab1Page {
+export class Tab1Page implements OnInit { // <-- Paso 2: Añadimos "implements OnInit"
+
+  // Variable para controlar si el esqueleto está visible o no
+  cargando: boolean = true;
 
   // Texto que el usuario va escribiendo en la barra de búsqueda
   textoBuscar: string = '';
@@ -47,6 +50,14 @@ export class Tab1Page {
   juegosFiltrados = [...this.juegos];
 
   constructor() {}
+
+  // Paso 3: Añadimos la función de inicialización automática de la pantalla
+  ngOnInit() {
+    // Simulamos una carga de base de datos de 1.5 segundos (1500 ms)
+    setTimeout(() => {
+      this.cargando = false; // Al pasar el tiempo, quitamos el esqueleto gris
+    }, 1500);
+  }
 
   // Esta función se activará cada vez que teclee algo en el buscador
   buscarJuego(event: any) {
