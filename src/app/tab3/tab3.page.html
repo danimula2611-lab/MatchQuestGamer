@@ -111,9 +111,16 @@
 
     </ion-list>
 
-    <ion-button expand="block" color="danger" fill="solid" style="margin-top: 30px; font-weight: bold;">
+    <ion-button id="confirmar-logout" expand="block" color="danger" fill="solid" style="margin-top: 30px; font-weight: bold;">
       CERRAR SESIÓN
     </ion-button>
+
+    <ion-alert
+      trigger="confirmar-logout"
+      header="Cerrar Sesión"
+      message="¿Estás seguro de que deseas salir de MatchQuestGamer?"
+      [buttons]="botonesAlert">
+    </ion-alert>
 
   </div>
 
