@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router'; // <-- Importamos para leer pa
 export class ChatDetallePage implements OnInit {
 
   nombreUsuario: string = '';
+  fotoUsuario: string = ''; // <-- NUEVO: Variable para guardar la URL de la foto de perfil
   nuevoMensaje: string = '';
   
   // Lista donde guardaremos los mensajes de la conversación
@@ -22,6 +23,15 @@ export class ChatDetallePage implements OnInit {
     // Capturamos el nombre de la URL de forma dinámica
     this.nombreUsuario = this.route.snapshot.paramMap.get('nombre') || 'Gamer';
 
+    // NUEVO: Asignamos de forma automática la foto correcta según el nombre del usuario
+    if (this.nombreUsuario === 'AlexGamer_99') {
+      this.fotoUsuario = 'https://i.pravatar.cc/150?u=alex';
+    } else if (this.nombreUsuario === 'Lucia_Hunter') {
+      this.fotoUsuario = 'https://i.pravatar.cc/150?u=lucia';
+    } else if (this.nombreUsuario === 'Antonio_el_rey') {
+      this.fotoUsuario = 'https://i.pravatar.cc/150?u=antonio';
+    } 
+    
     // Cargamos una conversación de prueba dependiendo de quién sea
     this.cargarHistorialSimulado();
   }
