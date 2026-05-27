@@ -19,6 +19,11 @@ const routes: Routes = [
     // Cambiado a loadComponent porque la página es Standalone
     path: 'register',
     loadComponent: () => import('./register/register.page').then(m => m.RegisterPage)
+  },
+  {
+    // CAMBIO AQUÍ: Añadimos /:nombre para que la ruta sea dinámica
+    path: 'chat-detalle/:nombre',
+    loadChildren: () => import('./chat-detalle/chat-detalle.module').then( m => m.ChatDetallePageModule)
   }
 ];
 

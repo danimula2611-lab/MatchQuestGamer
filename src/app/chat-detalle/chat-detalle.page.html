@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2" text="Atrás"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ nombreUsuario }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" style="--background: #f0f2f5;">
+
+  <div class="chat-container">
+    <div *ngFor="let msg of mensajes" 
+         [class.mensaje-mio]="msg.esMio" 
+         [class.mensaje-otro]="!msg.esMio" 
+         class="burbuja-mensaje">
+      <p class="texto-msg">{{ msg.texto }}</p>
+      <span class="hora-msg">{{ msg.hora }}</span>
+    </div>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-item lines="none" style="--background: transparent; width: 100%;">
+      <ion-input [(ngModel)]="nuevoMensaje" placeholder="Escribe un mensaje..." (keyup.enter)="enviarMensaje()"></ion-input>
+      <ion-button slot="end" fill="clear" (click)="enviarMensaje()">
+        <ion-icon name="send" slot="icon-only" color="primary"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
