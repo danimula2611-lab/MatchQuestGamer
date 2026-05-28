@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab1" text="Cancelar"></ion-back-button>
+    </ion-buttons>
+    <ion-title>MatchQuest Radar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-text-center" style="--background: #0f172a;">
+  
+  <div style="margin-top: 15vh; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    
+    <div style="position: relative; width: 120px; height: 120px; margin-bottom: 30px; display: flex; align-items: center; justify-content: center;">
+      
+      <ion-spinner *ngIf="!matchEncontrado" name="circular" color="secondary" style="transform: scale(3.5);"></ion-spinner>
+      
+      <ion-icon *ngIf="matchEncontrado" name="checkmark-circle" color="success" style="font-size: 90px; animation: bounce 0.5s ease-in-out;"></ion-icon>
+    </div>
+
+    <h1 style="color: #ffffff; font-weight: bold; font-size: 26px; margin-bottom: 10px;">
+      {{ juego }}
+    </h1>
+
+    <div style="min-height: 60px; padding: 0 20px;">
+      <p style="color: #94a3b8; font-size: 16px; line-height: 1.4; transition: all 0.3s ease;">
+        {{ estadoBusqueda }}
+      </p>
+    </div>
+
+    <div *ngIf="matchEncontrado" 
+         style="margin-top: 30px; background: #1e293b; border: 2px solid #10b981; border-radius: 12px; padding: 15px 25px; color: #ffffff; box-shadow: 0 0 15px rgba(16, 185, 129, 0.3);">
+      <p style="margin: 0; font-weight: bold; display: flex; align-items: center; gap: 8px; justify-content: center;">
+        <ion-icon name="sparkles" color="warning"></ion-icon>
+        Sala de chat asignada con éxito
+      </p>
+    </div>
+
+  </div>
+
+</ion-content>

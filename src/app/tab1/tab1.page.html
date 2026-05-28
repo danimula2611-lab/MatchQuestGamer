@@ -72,7 +72,8 @@
       <ion-card-content style="color: #2c3e50;">
         {{ juego.descripcion }}
         
-        <ion-button expand="block" fill="solid" class="ion-margin-top" 
+        <ion-button expand="block" fill="solid" class="ion-margin-top"
+          [routerLink]="['/buscando-match', juego.titulo]"
           [style.--background]="juego.titulo === 'Valorant' ? '#00e5ff' : 
                                juego.titulo === 'League of Legends' ? '#ff007f' : 
                                juego.titulo === 'FC 26' ? '#ffd600' : '#4caf50'"

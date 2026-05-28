@@ -16,14 +16,17 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    // Cambiado a loadComponent porque la página es Standalone
     path: 'register',
     loadComponent: () => import('./register/register.page').then(m => m.RegisterPage)
   },
   {
-    // CAMBIO AQUÍ: Añadimos /:nombre para que la ruta sea dinámica
     path: 'chat-detalle/:nombre',
-    loadChildren: () => import('./chat-detalle/chat-detalle.module').then( m => m.ChatDetallePageModule)
+    loadChildren: () => import('./chat-detalle/chat-detalle.module').then(m => m.ChatDetallePageModule)
+  },
+  {
+    // MODIFICADO: Cambiado a loadComponent para soportar la página Standalone sin el módulo antiguo
+    path: 'buscando-match/:juego',
+    loadComponent: () => import('./buscando-match/buscando-match.page').then(m => m.BuscandoMatchPage)
   }
 ];
 
